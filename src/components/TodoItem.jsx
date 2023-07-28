@@ -1,15 +1,15 @@
 
-export const TodoItem = () => {
+export const TodoItem = ({description, idTodo}) => {
     return (
         <div className="mt-3 d-flex tarjeta">
             <div className="p-2 flex-grow-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, earum omnis culpa eius voluptatibus vitae saepe quam? Harum eius voluptatem, impedit omnis modi pariatur, placeat distinctio facilis fugiat dolor facere.</p>
+                <p>{description}</p>
             </div>
             <div className="p-2">
-                <button className="btn btn-danger">editar</button>
+                <button className="btn btn-warning">Editar</button>
             </div>
             <div className="p-2">
-                <button className="btn btn-danger">editar</button>
+                <button className="btn btn-danger">Eliminar</button>
             </div>
         </div>
     )

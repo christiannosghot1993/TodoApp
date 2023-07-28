@@ -3,6 +3,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin: 10px 10px 10px 10px;
 }
 
 .styled-input {
@@ -14,4 +15,10 @@
   font-size: 16px;
   transition: border-bottom-color 0.3s ease;
   margin-right: 15px;
+}
+
+.todo-list {
+  max-height: 300px; /* Altura máxima del contenedor con scroll */
+  overflow-y: auto; /* Habilitar el scroll vertical cuando el contenido desborde */
+
 }
