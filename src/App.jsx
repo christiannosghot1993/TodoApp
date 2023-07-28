@@ -7,7 +7,7 @@ import { TodoList } from './components/TodoList'
 function App() {
   const [toDos, setToDos] = useState([]);
   const [loading, setloading] = useState(true);
-  const [nextIdToDo, setnextIdToDo] = useState(0);
+  const [nextIdToDo, setnextIdToDo] = useState(1);
 
   useEffect(() => {
     const getTodoList = async () => {
@@ -39,11 +39,11 @@ function App() {
 
 
   return (
-    <div className='container position-absolute top-50 start-50 translate-middle'>
+    <div className='container position-absolute top-50 start-50 translate-middle pt-5' style={{height: '100%'}} >
       <Form handleSubmit={setToDos} nextId={nextIdToDo}/>
 
       {
-        !loading && <TodoList toDos={toDos} />
+        !loading && <TodoList toDos={toDos} handleToDos={setToDos}/>
       }
 
     </div>

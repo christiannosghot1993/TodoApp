@@ -4,8 +4,12 @@ import React from "react";
 
 export const Form = React.memo(({ handleSubmit, nextId }) => {
     const onSubmit = async (event) => {
+
         event.preventDefault();
+        if(!(event.target.elements.description.value))
+            return;
         let todoDescription = event.target.elements.description.value;
+        console.log('nextId',nextId)
         const newToDo = {
             id: nextId,
             description: todoDescription,
@@ -36,7 +40,7 @@ export const Form = React.memo(({ handleSubmit, nextId }) => {
             <h1 style={{ textAlign: 'center' }}>Lista de tareas</h1>
             <form onSubmit={onSubmit} className="container">
                 <div className="row">
-                    <input name="description" type="text" className="col-sm-10 styled-input" id="exampleFormControlInput1" placeholder="name@example.com" />
+                    <input name="description" type="text" className="col-sm-10 styled-input" id="exampleFormControlInput1" placeholder="Ingresa aquí tu tarea" />
                     <button className="btn btn-primary col-sm-1" >Crear</button>
                 </div>
             </form>
