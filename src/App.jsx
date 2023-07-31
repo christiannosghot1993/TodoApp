@@ -33,6 +33,8 @@ function App() {
     if(toDos.length>0){
       let ultimoIdToDo=toDos[toDos.length-1].id;
       setnextIdToDo(ultimoIdToDo+1);
+    }else{
+      setnextIdToDo(1);
     }
   }, [toDos])
   
