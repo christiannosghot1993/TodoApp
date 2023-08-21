@@ -47,7 +47,7 @@ export const ModalEdit = ({ handleCloseModal, idEditar, descriptionEditar, handl
         }
     }
     return (
-        <div className="modal fade show" tabIndex="-1" style={{ display: 'block' }}>
+        <div className="animate__animated animate__headShake modal fade show" tabIndex="-1" style={{ display: 'block' }}>
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">

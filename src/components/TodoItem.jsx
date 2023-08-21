@@ -48,7 +48,7 @@ export const TodoItem = ({ description, idTodo, handleToDos, done }) => {
 
     return (
         <>
-            <div className={'mt-3 d-flex ' + (terminado ? 'tarjeta-done' : 'tarjeta')} >
+            <div className={'animate__animated animate__rubberBand mt-3 d-flex ' + (terminado ? 'tarjeta-done' : 'tarjeta' )} >
                 <div className="p-2 flex-grow-1">
                     <p>{description}</p>
                 </div>
