@@ -25,12 +25,23 @@ export const TodoItem = ({ description, idTodo, handleToDos, done }) => {
     };
     const handleDone = async () => {
         setTerminado(!terminado);
+        handleToDos(t=>{
+            const newTodo=[
+                ...t
+            ];
+            return newTodo.map(task=>{
+                if(task.id===idTodo){
+                    task.done= !terminado;
+                    return task;
+                }
+                return task;
+            });
+        });
         const data = {
             id: idTodo,
             description,
             done: !terminado
         };
-        console.log(data)
         const requestOptions = {
             method: 'PUT',
             headers: {

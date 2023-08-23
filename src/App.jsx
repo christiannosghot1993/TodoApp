@@ -3,6 +3,7 @@ import './App.css'
 import { Form } from './components/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TodoList } from './components/TodoList'
+import { Encabezado } from './components/Encabezado';
 
 function App() {
   const [toDos, setToDos] = useState([]);
@@ -37,11 +38,10 @@ function App() {
       setnextIdToDo(1);
     }
   }, [toDos])
-  
-
 
   return (
     <div className='container position-absolute top-50 start-50 translate-middle pt-5' style={{height: '100%'}} >
+      <Encabezado toDos={toDos}/>
       <Form handleSubmit={setToDos} nextId={nextIdToDo}/>
 
       {
